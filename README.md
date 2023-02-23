@@ -10,4 +10,4 @@ This script was created for testing purposes on the following environment. No er
 * Pylint 1.5.5
 
 note:  
-By the way, if you want to integrate the difference obtained by `git diff` with the results of `pylint`, it is believed that obtaining the diff of the results by executing `pylint` on the snapshots of both `before` and `after` diffs is more accurate than using this script. For example, if the results of `pylint` differ outside the changed source line, this script cannot detect it.
+By the way, if you want to integrate the diff obtained by git diff and the result of pylint, it may be more accurate to execute pylint with `before` and `after` snapshots of the diff and obtain the diff of the results, rather than using this script. For example, if there is a pylint rule that produces different results outside the modified source line, this script cannot detect it.
