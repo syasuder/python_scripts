@@ -22,7 +22,7 @@ for f in files.split('\n'):
   pylint_lines_dict = {}
   for pyline in pylint_output.split('\n'):
     if pyline[:2] in ['E:', 'W:']:
-      line_number = pyline.split(':')[1].split(',')[0]
+      line_number = int(pyline.split(':')[1].split(',')[0].strip())
       if not str(line_number) in pylint_lines_dict:
         pylint_lines_dict[str(line_number)] = []
       pylint_lines_dict[str(line_number)].append(pyline)
