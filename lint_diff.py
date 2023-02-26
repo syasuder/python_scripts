@@ -44,4 +44,4 @@ for f in files.split('\n'):
           for i in range(start, start + count):
             # Print the pylint result if the line is relevant
             if str(i) in pylint_lines_dict:
-              print '@@@@@', pylint_lines_dict[str(i)]
+              print '@@@@@', f, pylint_lines_dict[str(i)]
